@@ -1,0 +1,22 @@
+MYGO=/home/henry/personal/devtools/go/go-1.7.3
+if [ -d $MYGO/bin ]; then
+    export GOROOT=$MYGO
+    export PATH=$MYGO/bin:$PATH
+fi
+
+MYNODEJS=/home/henry/personal/devtools/node/node-v6.9.1-linux-x64
+if [ -d $MYNODEJS/bin ]; then
+    export PATH=$MYNODEJS/bin:$PATH
+fi
+
+MYNGCOMPLETION=/home/henry/.ng-completion
+if [ -f $MYNGCOMPLETION ]; then
+    source $MYNGCOMPLETION
+fi
+
+MYGITPROMPT=/home/henry/.git-prompt.sh
+if [ -f $MYGITPROMPT ]; then
+    source $MYGITPROMPT
+    export PS1='$(__git_ps1 "(%s) ")'$PS1
+fi
+
